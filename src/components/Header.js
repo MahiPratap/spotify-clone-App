@@ -3,10 +3,10 @@ import React from "react";
 import { Search } from "@material-ui/icons";
 import "./Header.css";
 import { Avatar } from "@material-ui/core";
-import { useDataLayerValue } from "./StateProvider";
+import { useStateValue } from "./StateProvider";
 
 function Header() {
-  const [{ user }, dispatch] = useDataLayerValue();
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="header">

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
 import { useStateValue } from "./components/StateProvider";
-import Player from "./Player";
-import { getTokenFromResponse } from "./components/spotify";
+import Player from "./components/Player";
+import { getTokenFromResponse } from "./components/Spotify";
 import "./App.css";
 import Login from "./components/Login";
 
@@ -25,7 +25,7 @@ function App() {
         token: _token,
       });
 
-      s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
+      s.getPlaylist("37i9dQZF1E34Ucml4HHx1w").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
@@ -41,7 +41,7 @@ function App() {
 
       dispatch({
         type: "SET_SPOTIFY",
-        spotify: s,
+        Spotify: s,
       });
 
       s.getMe().then((user) => {
@@ -63,7 +63,7 @@ function App() {
   return (
     <div className="app">
       {!token && <Login />}
-      {token && <Player spotify={s} />}
+      {token && <Player Spotify={s} />}
     </div>
   );
 }
