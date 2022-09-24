@@ -2,12 +2,16 @@
 import React from "react";
 import "./Body.css";
 import Header from "./Header";
-import { useDataLayer } from "./DataLayer";
-import { PlayCircleFilled, Favorite, MoreHoriz } from "@material-ui/icons";
+import { useStateValue } from "./StateProvider";
+// import { PlayCircleFilled, Favorite, MoreHoriz } from "@material-ui/icons";
 import SongRow from "./SongRow";
+import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+
 
 function Body({ spotify }) {
-    const [{ discover_weekly }, dispatch] = useDataLayer();
+    const [{ discover_weekly }, dispatch] = useStateValue();
   
     const playPlaylist = (id) => {
       spotify
