@@ -6,7 +6,7 @@ function Login() {
   return (
     <div className='login'>
         <img 
-            src= "https://images.indianexpress.com/2021/08/Spotify.jpg"
+            src= "https://www.freepnglogos.com/pics/spotify-logo-png"
             alt='logo'
         />
         <a href={accessUrl}>LOGIN WITH SPOTIFY</a>
