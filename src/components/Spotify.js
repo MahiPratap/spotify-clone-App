@@ -2,11 +2,7 @@
 // https://accounts.spotify.com/authorize
 
 export const authEndpoint = "https://accounts.spotify.com/authorize";
-<<<<<<< HEAD
 const redirectUri = "https://spotify-clone-mahi.web.app";
-=======
-const redirectUri = "https://spotify-clone-mahi.web.app/";
->>>>>>> 3fffd920109eaabcb5f5280f1bb7edb027b82f80
 const clientId = "634eb57742ae41829c0e4767921b328d";
 
 const scopes = [
